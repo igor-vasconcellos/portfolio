@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #080808;
+  --second-bg-color: #101010;
+  --text-color: #fff;
+  --main-color: #ea580c;
+}
+html {
+  font-size: 60%;
+  overflow: auto;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow: auto;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 4rem 15%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+#menu-icon {
+  font-size: 3.5rem;
+  color: var(--main-color);
+  display: none;
+}
+
+.logo {
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3 ease-in-out;
+}
+.logo :hover {
+  transform: scale(1.1);
+}
+span {
+  background: linear-gradient(270deg, #df8908, #ff1d15);
+  background-clip: text;
+  color: transparent;
+}
+.navbar a {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+
+.gradient-btn {
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border-radius: 3rem;
+  background: linear-gradient(270deg, #df8908, #ff1d15);
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  color: #fff;
+  border: none;
+  text-wrap: nowrap;
+}
+
+.gradient-btn:hover {
+  transform: scale(1.05);
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 15%;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.home-content h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  line-height: 1;
+}
+
+.home-content h3 {
+  margin: 1rem 0;
+  font-size: 4rem;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.home-img img {
+  width: 32w;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.4s ease-in-out;
+}
+
+.home-img img:hover {
+  box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color),
+    0 0 100px var(--main-color);
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 3rem;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  color: var(--main-color);
+  margin: 3rem 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: var(--text-color);
+  background-color: var(--main-color);
+  transform: scale(1.2) translateY(-5px);
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+.btn-group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  color: #000;
+  border: 2px solid transparent;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+}
+
+.btn-group a:nth-of-type(2) {
+  background-color: #000;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 25px transparent;
+}
+
+.btn-group a:nth-of-type(2):hover {
+  box-shadow: 0 0 25px transparent;
+  background-color: var(--main-color);
+  color: #000;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background-color: var(--second-bg-color);
+}
+
+.about-img img {
+  width: 32w;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.4s ease-in-out;
+}
+
+.about-img img:hover {
+  box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color),
+    0 0 100px var(--main-color);
+}
+
+.about-content h2 {
+  font-size: 7rem;
+  text-align: left;
+}
+
+.about-content p {
+  font-size: 1.8rem;
+}
+
+.about-content .btn {
+  margin: 3rem 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
