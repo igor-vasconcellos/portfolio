@@ -10,6 +10,11 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -19,13 +24,13 @@
 
       <nav class="navbar">
         <a href="#home">Home</a>
-        <a href="#about"> About</a>
+        <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#contacts">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
 
-      <button class="gradient-btn">Contact-me</button>
+      <button class="gradient-btn">Contact Me</button>
     </header>
 
     <section class="home" id="home">
@@ -54,7 +59,24 @@
         </div>
 
         <div class="btn-group">
-          <a href="#" class="btn">Hire</a>
+          <button class="download-btn">
+            <i class="fa-solid fa-download"></i>Download CV
+            <div class="progress-wrapper">
+              <div class="inner"></div>
+              <div class="checkmark">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="circle">
+                <div class="bar left">
+                  <div class="progress"></div>
+                </div>
+                <div class="bar right">
+                  <div class="progress"></div>
+                </div>
+              </div>
+            </div>
+          </button>
           <a href="#contact" class="btn">Contact</a>
         </div>
       </div>
@@ -132,7 +154,7 @@
       </div>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projects">
       <h2 class="heading">Projects</h2>
 
       <div class="projects-box">
@@ -151,7 +173,7 @@
         </div>
 
         <div class="project-card">
-          <img src="../images/Imagem do WhatsApp de 2024-11-13 à(s) 15.52.23_5b2eaaa4.jpg" alt="" />
+          <img src="../images/home.png" alt="" />
 
           <h3>TimeControl</h3>
           <p>
@@ -165,7 +187,7 @@
         </div>
 
         <div class="project-card">
-          <img src="../images/Imagem do WhatsApp de 2024-11-13 à(s) 15.52.23_5b2eaaa4.jpg" alt="" />
+          <img src="../images/home.png" alt="" />
 
           <h3>Avaliation System</h3>
           <p>
@@ -176,12 +198,67 @@
           </p>
 
           <div class="btn">ReviewProject</div>
+          <div class="btn-github"></div>
         </div>
-
-        
-
       </div>
     </section>
+
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+      <form action="#">
+        <div class="input-group">
+          <div class="input-box">
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Email" />
+          </div>
+          <div class="input-box">
+            <input type="number" placeholder="Phone Number" />
+            <input type="text" placeholder="Subject" />
+          </div>
+        </div>
+        <div class="input-group-2">
+          <textarea
+            name=""
+            id=""
+            placeholder="Your Message"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input type="submit" value="Send Message" class="btn" />
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="#">
+          <i class="bx bxl-github"></i>
+        </a>
+        <a href="#">
+          <i class="bx bxl-linkedin"></i>
+        </a>
+        <a href="#">
+          <i class="bx bxl-instagram"></i>
+        </a>
+      </div>
+
+      <ul class="list">
+        <li>
+          <a href="#">FAQ</a>
+        </li>
+        <li>
+          <a href="#services">Services</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+        <p class="copyright">© Igor Vasconcellos | All Rights Reserved</p>
+      </ul>
+    </footer>
 
     <script src="../js/script.js"></script>
   </body>

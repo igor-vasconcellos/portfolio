@@ -16,6 +16,7 @@
 html {
   font-size: 60%;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -49,9 +50,9 @@ body {
   color: var(--text-color);
   font-weight: 800;
   cursor: pointer;
-  transition: 0.3 ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-.logo :hover {
+.logo:hover {
   transform: scale(1.1);
 }
 span {
@@ -70,7 +71,7 @@ span {
 
 .navbar a:hover {
   color: var(--main-color);
-  border-bottom: 3px solid var(--main-color);
+  border-bottom: 4px solid var(--main-color);
 }
 
 .gradient-btn {
@@ -179,6 +180,150 @@ section {
   transition: 0.3s ease-in-out;
 }
 
+/* Novo estilo para o botão Download CV */
+.download-btn {
+  position: relative;
+  width: 170px;
+  height: 50px;
+  background: var(--main-color);
+  border-radius: 40px; /* Mantém o botão arredondado */
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s ease-in-out;
+}
+
+.download-btn.active {
+  background: #0056b3; /* Exemplo: cor de fundo alterada quando ativado */
+  transform: scale(1.1); /* Exemplo: efeito de aumento */
+  box-shadow: 0 0 25px var(--main-color); /* Efeito de sombra ao ativar */
+}
+
+.btn-group .download-btn:hover {
+  background-color: var(--main-color);
+  transform: scale(1.05);
+}
+
+.btn-group .download-btn i {
+  margin-right: 7px;
+}
+
+.btn-group .download-btn:focus {
+  outline: none;
+}
+
+.progress-wrapper {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: scale(0);
+  transition-delay: 0.5s;
+}
+
+.progress-wrapper .inner {
+  position: absolute;
+  width: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background: #fff;
+  border-radius: 50%;
+  z-index: 2;
+  transition: 1s ease;
+  transition-delay: 4s;
+}
+
+.download-btn.active .progress-wrapper .inner {
+  transform: translate(-50%, 50%) scale(0);
+}
+
+.progress-wrapper .bar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ededed;
+  border-radius: 50%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+
+.progress-wrapper .bar .progress {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0c00af;
+  border-radius: 50%;
+  clip: rect(0px, 50px, 100px, 0px);
+}
+
+.circle .bar.left .progress {
+  transform: 1.5s linear;
+  transition-delay: 1s;
+}
+
+.download-btn.active .circle .bar.left .progress {
+  transform: rotate(180deg);
+}
+
+.circle .bar.right .progress {
+  transform: 1.5s linear;
+  transition-delay: 2.5s;
+}
+
+.download-btn.active .circle .bar.right .progress {
+  transform: rotate(180deg);
+}
+
+.progress-wrapper .checkmark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.checkmark .span {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 7px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: left;
+  transition-delay: 0.5s;
+}
+
+.checkmark span:first-child {
+  top: 45px;
+  left: 22px;
+  width: 30px;
+  transform: rotate(45deg) scaleX(0);
+  transition-delay: 0.5s;
+}
+
+.download-btn.active .checkmark span:first-child {
+  transform: rotate(45deg) scaleX(1);
+}
+
+.checkmark span:last-child {
+  top: 65px;
+  left: 40px;
+  width: 50px;
+  transform: rotate(-45deg) scaleX(0);
+  transition-delay: 5.5s;
+}
+
+.download-btn.active .checkmark span:last-child {
+  transform: rotate(-45deg) scaleX(1);
+}
+
 .btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
@@ -251,7 +396,7 @@ section {
 }
 
 .services {
-  background-color: #fff3f3;
+  background-color: #f7e0d7;
   color: #df7e7e;
 }
 
@@ -354,10 +499,146 @@ section {
   transform: scale(0.95); /* Aplica um leve "zoom out" para dentro da imagem */
 }
 
-.project-card h3{
+.project-card h3 {
   font-size: 3rem;
 }
 
-.project-card p{
+.project-card p {
   font-size: 1.5rem;
+}
+
+.contact {
+  background-color: var(--bg-color);
+}
+
+.contact h2 {
+  margin: 3rem;
+  color: var(--text-color);
+}
+
+.contact form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.contact form,
+.input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 2.5rem;
+  font-size: 2rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  border: 2px solid var(--main-color);
+  margin: 1.5rem 0;
+  resize: none;
+}
+
+.footer {
+  background-color: var(--second-bg-color);
+  padding: 50px 0;
+}
+
+.footer .social-icons {
+  text-align: center;
+}
+
+.footer ul {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.footer ul li a {
+  color: #fff;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover {
+  border-bottom: 4px solid var(--main-color);
+}
+
+.footer .copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+/* responsividade */
+
+@media (max-width: 1285px) {
+  #menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    width: 50%;
+    padding: 1rem 3rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    transform: translateX(100%); /* Esconde o menu fora da tela */
+    transition: transform 0.3s ease-in-out;
+  }
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: var(--text-color);
+  }
+  .navbar.active {
+    display: block;
+    transform: translateX(0);
+  }
+
+  .gradient-btn {
+    display: none;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    margin: 5rem 0;
+    gap: 5rem;
+  }
+
+  .home-content {
+    align-items: center;
+    text-align: center;
+  }
+  .home-img {
+    width: 56vw;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about h2 {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .about img {
+    width: 52w;
+  }
+
+  .contact form {
+    flex-direction: column;
+  }
 }
