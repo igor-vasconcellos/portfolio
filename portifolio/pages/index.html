@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PortFólio</title>
+    <title>PortFolio | Igor Vasconcellos</title>
 
     <link rel="stylesheet" href="../css/styles.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+
+    <link rel="icon" href="../images/icone-port.ico" type="image/x-icon" />
 
     <link
       rel="stylesheet"
@@ -27,10 +29,11 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
       </nav>
 
-      <button class="gradient-btn">Contact Me</button>
+      <button class="gradient-btn" onclick="window.location.href='#contact'">
+        Contact Me
+      </button>
     </header>
 
     <section class="home" id="home">
@@ -40,32 +43,37 @@
         <h3>I'm <span>Web Dev</span></h3>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
-          quod tempore nesciunt, accusantium unde modi non? Ducimus explicabo
-          officiis culpa, magnam, facilis quas vero at et ex sunt cumque
-          recusandae.
+          Sou estudante de Desenvolvimento de Software, com experiência prática
+          em desenvolvimento fullstack. Trabalho com tecnologias de Backend,
+          como Java e MySQL e Node.js, e Frontend, utilizando HTML, CSS, Figma e
+          Canva. Embora tenha experiência em ambas as áreas, meu foco está no
+          desenvolvimento de interfaces e soluções criativas para a experiência
+          do usuário.
         </p>
 
         <div class="social-icons">
-          <a href="#">
+          <a href="https://github.com/igor-vasconcellos">
             <i class="bx bxl-github"></i>
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/igor-vasconcellos">
             <i class="bx bxl-linkedin"></i>
           </a>
-          <a href="#">
+          <a href="https://instagram.com/igorvsconcellos">
             <i class="bx bxl-instagram"></i>
           </a>
         </div>
 
         <div class="btn-group">
           <div class="btn-group">
-            <a href="../CV IgorVasconcellos-2024.docx.pdf"
-            download class="btn btn-download">
+            <a
+              href="../CV IgorVasconcellos-2024.docx.pdf"
+              download
+              class="btn btn-download"
+            >
               <i class="fa-solid fa-download"></i>Download CV
             </a>
-          
-            <a href="#contact" class="btn">Contact</a>
+
+            <!-- <a href="#contact" class="btn">Contact</a> -->
           </div>
         </div>
       </div>
@@ -80,19 +88,20 @@
 
     <section class="about" id="about">
       <div class="about-img">
-        <img
-          src="../images/143509020.jpeg"
-          alt="Igor V2"
-        />
+        <img src="../images/igor2.jpeg" alt="Igor V2" />
       </div>
 
       <div class="about-content">
         <h2>About <span>Me</span></h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          voluptatibus rerum quidem cupiditate veritatis saepe ex a eius,
-          reiciendis consequuntur incidunt voluptatum illo, nemo deserunt, ipsam
-          iste nihil impedit amet!
+          Além de habilidades técnicas, sou comprometido com o aprendizado
+          contínuo e a aplicação de boas práticas de desenvolvimento. No meu
+          estágio, tenho atuado no desenvolvimento de sistemas, manutenção de
+          infraestrutura de TI e criação de materiais de marketing, sempre
+          buscando aprimorar minhas habilidades tanto no desenvolvimento quanto
+          no design. Estou em busca de desafios que me permitam crescer como
+          desenvolvedor e contribuir para a criação de soluções tecnológicas
+          inovadoras.
         </p>
         <a href="#" class="btn">Read More</a>
       </div>
@@ -107,10 +116,10 @@
             <i class="bx bx-code-alt"></i>
             <h4>Front-End Development</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-              tenetur amet aut, et, eum, consequuntur sequi numquam perspiciatis
-              sed cum suscipit! Fuga tenetur, quos amet illum minus fugit eos
-              illo?
+              Criação de páginas de destino responsivas e otimizadas, com foco
+              em design atrativo e funcionalidade, utilizando HTML, CSS e outras
+              tecnologias de frontend para garantir uma experiência do usuário
+              eficiente e agradável.
             </p>
           </div>
         </div>
@@ -120,10 +129,10 @@
             <i class="bx bxl-figma"></i>
             <h4>UI/UX Design</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-              tenetur amet aut, et, eum, consequuntur sequi numquam perspiciatis
-              sed cum suscipit! Fuga tenetur, quos amet illum minus fugit eos
-              illo?
+              Desenvolvimento de interfaces de usuário com foco na experiência
+              do usuário (UX), utilizando ferramentas como Figma para criar
+              protótipos, wireframes e designs interativos. Busco sempre
+              equilibrar estética e usabilidade para soluções intuitivas.
             </p>
           </div>
         </div>
@@ -133,10 +142,10 @@
             <i class="bx bx-code-curly"></i>
             <h4>Back-End Development</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-              tenetur amet aut, et, eum, consequuntur sequi numquam perspiciatis
-              sed cum suscipit! Fuga tenetur, quos amet illum minus fugit eos
-              illo?
+              Programação de sistemas robustos e escaláveis utilizando Java,
+              MySQL e outras tecnologias, com foco na criação de funcionalidades
+              eficientes, integração com bancos de dados e processamento de
+              dados de forma segura e otimizada.
             </p>
           </div>
         </div>
@@ -147,86 +156,132 @@
       <h2 class="heading">Projects</h2>
 
       <div class="projects-box">
+        <!-- Projeto PAEEJA -->
         <div class="project-card">
-          <img src="../images/home.png" alt="" />
-
+          <img src="../images/pagina-home-paeeja.png" alt="PAEEJA" />
           <h3>PAEEJA</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-            expedita nemo asperiores labore nulla autem, unde possimus nesciunt
-            odio atque. Est, maxime a molestias fuga impedit hic non voluptates
-            recusandae!
+            Uma plataforma digital de apoio ao ensino para a Educação de Jovens
+            e Adultos (EJA). Neste projeto, atuei ativamente como o principal
+            pilar no desenvolvimento do Front-End e fui responsável por todo o
+            design da interface. Desenvolvi uma experiência visual intuitiva e
+            acessível, garantindo que a plataforma fosse de fácil utilização
           </p>
-
-          <div class="btn">ReviewProject</div>
+          <!-- Ícones das tecnologias -->
+          <div class="tech-icons">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+          </div>
+          <!-- Link para o projeto -->
+          <div class="project-link">
+            <i class="fa-brands fa-github"></i>
+            <a
+              href="https://github.com/igor-vasconcellos/plataforma-de-ensino-web"
+              target="_blank"
+              >Acesse o código no GitHub</a
+            >
+          </div>
         </div>
 
+        <!-- Projeto TimeControl -->
         <div class="project-card">
-          <img src="../images/home.png" alt="" />
-
+          <img src="../images/time-control.jpg" alt="TimeControl" />
           <h3>TimeControl</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-            expedita nemo asperiores labore nulla autem, unde possimus nesciunt
-            odio atque. Est, maxime a molestias fuga impedit hic non voluptates
-            recusandae!
+            O TimeControl é um sistema de controle de horas de trabalho
+            desenvolvido como demanda do meu estágio que busca otimizar o
+            registro de jornada dos funcionários. O sistema permite o registro
+            de entrada, saída e pausas, além de gerar relatórios sobre as horas
+            trabalhadas.
           </p>
+          <!-- Ícones das tecnologias -->
+          <div class="tech-icons">
+            <i class="fab fa-java"></i>
+            <i class="fab fa-mysql"></i>
+          </div>
+          <!-- Link para o projeto -->
+          <div class="project-link">
+            <i class="fa-brands fa-github"></i>
 
-          <div class="btn">ReviewProject</div>
+            <a
+              href="https://github.com/igor-vasconcellos/time-control-lite"
+              target="_blank"
+              >Acesse o código no GitHub</a
+            >
+          </div>
         </div>
 
+        <!-- Projeto Avaliation System -->
         <div class="project-card">
-          <img src="../images/home.png" alt="" />
-
+          <img src="../images/avaliation-system.png" alt="Avaliation System" />
           <h3>Avaliation System</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-            expedita nemo asperiores labore nulla autem, unde possimus nesciunt
-            odio atque. Est, maxime a molestias fuga impedit hic non voluptates
-            recusandae!
+            O Avaliation System foi desenvolvido para uma farmácia, com o
+            objetivo de monitorar a avaliação dos clientes sobre o atendimento e
+            outros serviços. A ferramenta coleta feedbacks dos clientes,
+            permitindo que a farmácia analise a qualidade do atendimento e
+            identifique áreas de melhoria.
           </p>
+          <!-- Ícones das tecnologias -->
+          <div class="tech-icons">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <i class="fa-brands fa-node-js"></i>
+          </div>
+          <!-- Link para o projeto -->
+          <div class="project-link">
+            <i class="fa-brands fa-github"></i>
 
-          <div class="btn">ReviewProject</div>
-          <div class="btn-github"></div>
+            <a
+              href="https://github.com/igor-vasconcellos/sistema-de-avaliacao"
+              target="_blank"
+              >Acesse o código no GitHub</a
+            >
+          </div>
         </div>
       </div>
     </section>
 
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me</span></h2>
-      <form action="#">
+      <form id="form">
         <div class="input-group">
           <div class="input-box">
-            <input type="text" placeholder="Full Name" />
-            <input type="email" placeholder="Email" />
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input type="email" name="email" placeholder="Email" required />
           </div>
           <div class="input-box">
-            <input type="number" placeholder="Phone Number" />
-            <input type="text" placeholder="Subject" />
+            <input type="number" name="phone" placeholder="Phone Number" />
+            <input type="text" name="subject" placeholder="Subject" />
           </div>
         </div>
         <div class="input-group-2">
           <textarea
-            name=""
-            id=""
+            name="message"
             placeholder="Your Message"
             cols="30"
             rows="10"
+            required
           ></textarea>
           <input type="submit" value="Send Message" class="btn" />
         </div>
       </form>
+      <div id="form-message" style="display: none">
+        Mensagem enviada com sucesso!
+      </div>
     </section>
 
     <footer class="footer">
       <div class="social-icons">
-        <a href="#">
+        <a href="https://github.com/igor-vasconcellos">
           <i class="bx bxl-github"></i>
         </a>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/igor-vasconcellos">
           <i class="bx bxl-linkedin"></i>
         </a>
-        <a href="#">
+        <a href="https://instagram.com/igorvsconcellos">
           <i class="bx bxl-instagram"></i>
         </a>
       </div>
