@@ -478,6 +478,8 @@ section {
 .project-card .tech-icons i {
   font-size: 4rem; /* Tamanho dos ícones */
   color: var(--text-color); /* Cor dos ícones */
+  text-shadow: 0px 5px 10px #df7e7e
+
 }
 
 .project-card .project-link {
