@@ -5,31 +5,35 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
 };
 
+// funções para o formulário de contato funcionar:
+
 class FormSubmit {
   constructor(formSelector, messageSelector) {
-    this.form = document.querySelector(formSelector); // Seleciona o formulário
-    this.messageBox = document.querySelector(messageSelector); // Caixa de mensagem
-    this.url = "https://formspree.io/f/mbljkdby"; // URL do Formspree
-    this.sendForm = this.sendForm.bind(this); // Garante o contexto correto no método
+    this.form = document.querySelector(formSelector);
+    this.messageBox = document.querySelector(messageSelector);
+    this.url = "https://formspree.io/f/mbljkdby";
+    this.sendForm = this.sendForm.bind(this);
   }
 
+  // função pra mostrar a mensagem de aviso que a mensagem foi enviada:
+
   displayMessage() {
-    this.messageBox.style.display = "block"; // Mostra a mensagem
+    this.messageBox.style.display = "block";
     setTimeout(() => {
-      this.messageBox.style.display = "none"; // Esconde a mensagem após 3 segundos
+      this.messageBox.style.display = "none";
     }, 3000);
   }
 
   clearForm() {
-    this.form.reset(); // Limpa os campos do formulário
+    this.form.reset();
   }
 
   getFormObject() {
-    return new FormData(this.form); // Captura os dados do formulário
+    return new FormData(this.form);
   }
 
   async sendForm(event) {
-    event.preventDefault(); // Previne o envio padrão
+    event.preventDefault();
     try {
       const response = await fetch(this.url, {
         method: "POST",
@@ -37,8 +41,8 @@ class FormSubmit {
         headers: { Accept: "application/json" },
       });
       if (response.ok) {
-        this.displayMessage(); // Mostra a mensagem de sucesso
-        this.clearForm(); // Limpa os campos do formulário
+        this.displayMessage();
+        this.clearForm();
       } else {
         console.error("Erro no envio:", response.statusText);
       }
@@ -48,9 +52,9 @@ class FormSubmit {
   }
 
   init() {
-    if (this.form) this.form.addEventListener("submit", this.sendForm); // Adiciona o evento de envio
+    if (this.form) this.form.addEventListener("submit", this.sendForm);
   }
 }
 
 const formSubmit = new FormSubmit("#form", "#form-message");
-formSubmit.init(); // Inicializa a classe
+formSubmit.init();
