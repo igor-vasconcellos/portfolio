@@ -1,0 +1,103 @@
+/* responsividade */
+
+@media (max-width: 1285px) {
+    #menu-icon {
+      display: block;
+      cursor: pointer;
+    }
+    .navbar {
+      position: absolute;
+      top: 100%;
+      right: 0%;
+      width: 50%;
+      padding: 1rem 3rem;
+      background: rgba(0, 0, 0, 0.8);
+      border-bottom-left-radius: 2rem;
+      border-left: 2px solid var(--main-color);
+      border-bottom: 2px solid var(--main-color);
+      transform: translateX(100%); /* Esconde o menu fora da tela */
+      transition: transform 0.3s ease-in-out;
+    }
+    .navbar a {
+      display: block;
+      font-size: 2rem;
+      margin: 3rem 0;
+      color: var(--text-color);
+    }
+    .navbar.active {
+      display: block;
+      transform: translateX(0);
+    }
+  
+    .gradient-btn {
+      display: none;
+    }
+  
+    .home {
+      flex-direction: column-reverse;
+      margin: 5rem 0;
+      gap: 5rem;
+    }
+  
+    .home-content {
+      align-items: center;
+      text-align: center;
+    }
+    .home-img {
+      width: 56vw;
+    }
+  
+    .about {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .about h2 {
+      text-align: center;
+      margin: 2rem 0;
+    }
+  
+    .about img {
+      width: 52w;
+    }
+  
+    .contact form {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .projects-box {
+      grid-template-columns: 1fr; /* Cards em colunas para telas pequenas */
+    }
+  
+    .project-card {
+      height: auto; /* Altura adaptativa */
+      padding: 4rem 2rem; /* Espaçamento reduzido */
+    }
+  
+    .project-card img {
+      height: 200px; /* Reduz a altura das imagens */
+    }
+  
+    .project-card h3 {
+      font-size: 3.5rem; /* Texto proporcional em telas menores */
+    }
+  
+    .project-card p {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .projects-box {
+      grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .projects-box {
+      grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+    }
+  }
+  
