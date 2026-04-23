@@ -9,8 +9,6 @@ Bem-vindo ao meu portfólio! Este repositório contém o código-fonte do meu si
 
 ## 📋 Sobre
 
-Sou um desenvolvedor apaixonado por criar soluções criativas e funcionais para problemas técnicos e de design. Meu portfólio reflete minhas experiências em projetos reais, destacando minha atuação em:
-
 - **Desenvolvimento de Sistemas:** Criação de aplicativos e soluções personalizadas com foco em eficiência.
 - **Design de Interfaces:** Criação de layouts e interfaces intuitivas utilizando ferramentas modernas.
 - **Manutenção e Suporte Técnico:** Suporte em hardware, software e redes.
