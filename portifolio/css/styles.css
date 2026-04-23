@@ -371,99 +371,122 @@ section {
 
 .projects-box {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
-  gap: 2rem; /* Espaçamento entre os cards */
-  align-items: center; /* Centraliza os itens verticalmente */
-  justify-items: center; /* Centraliza horizontalmente os cards */
+  /* Responsividade: muda para 1 coluna em telas pequenas automaticamente */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  justify-items: center;
 }
-
 
 .project-card {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Alinha itens em coluna */
   background-color: var(--main-color);
-  height: 700px; /* Altura maior que o dos services */
+  height: 650px; /* Altura fixa para manter todos iguais */
+  width: 100%;
+  max-width: 400px;
   border-radius: 3rem;
-  border: 5px solid transparent;
+  padding: 3rem;
   transition: 0.4s ease-in-out;
-  flex-direction: column;
-  padding: 6rem 3rem; /* Espaçamento interno maior */
-  overflow: hidden;
-  width: 100%; /* Largura responsiva */
-  max-width: 400px; /* Limita o tamanho máximo do card */
-  margin: auto; /* Centraliza os cards */
+  border: 5px solid transparent;
 }
 
 .project-card:hover {
-  box-shadow: 0 0 30px var(--main-color), 0 0 60px var(--main-color); /* Efeito de sombra mais intenso */
-  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+  box-shadow: 0 0 30px var(--main-color);
+  transform: translateY(-10px);
 }
 
-.project-card, .pjt-img1{
-  padding: 0;
-  margin-top: 20px;
+/* Container das imagens */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Mantém a altura padrão dos cards [cite: 51] */
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+/* Estilo base para todas as imagens no fade */
+.fade-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a foto não distorça  */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  animation: fader 12s infinite; /* 12 segundos para o ciclo total */
+}
+
+/* Configuração do timing para 3 imagens */
+/* Cada imagem aparece por 4 segundos (12s / 3) */
+.fade-img:nth-child(1) { animation-delay: 0s; }
+.fade-img:nth-child(2) { animation-delay: 4s; }
+.fade-img:nth-child(3) { animation-delay: 8s; }
+
+@keyframes fader {
+  0% { opacity: 0; }
+  10% { opacity: 1; }  /* Aparece */
+  33% { opacity: 1; }  /* Fica visível */
+  43% { opacity: 0; }  /* Desaparece */
+  100% { opacity: 0; }
 }
 
 .project-card img {
   width: 100%;
-  height: 250px; /* Altura maior para imagens */
-  object-fit: cover;
-  border-radius: 15px; /* Bordas levemente arredondadas */
-  transition: transform 0.5s ease;
-}
-
-.project-card:hover img {
-  transform: scale(1.05); /* Zoom suave para fora */
+  height: 200px; /* Altura fixa para a imagem */
+  object-fit: cover; /* Faz a foto preencher o espaço sem esticar */
+  border-radius: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .project-card h3 {
-  font-size: 4.5rem; /* Tamanho ligeiramente maior */
+  font-size: 2.8rem;
   font-weight: 800;
-  color: var(--text-color);
-  margin: 2.5rem 0;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .project-card p {
-  font-size: 1.6rem; /* Ajuste para maior legibilidade */
-  font-weight: 600;
-  line-height: 1.8;
-  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6;
   text-align: center;
+  flex: 1; /* Ocupa o espaço disponível, empurrando os ícones para baixo */
+  overflow: hidden; /* Garante que texto gigante não quebre o layout */
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Limita a 5 linhas de texto */
+  -webkit-box-orient: vertical;
 }
 
-.project-card .tech-icons i {
-  font-size: 5rem; /* Ícones maiores */
-  color: var(--text-color);
-  text-shadow: 0px 5px 15px #df7e7e;
-}
-
-.project-card .tech-icons {
+.tech-icons {
   display: flex;
-  gap: 1rem; /* Espaçamento dos ícones */
   justify-content: center;
-  margin-top: 1rem;
+  gap: 1.5rem;
+  margin: 2rem 0;
 }
 
-.project-card .project-link {
-  margin-top: 2rem;
+.tech-icons i {
+  font-size: 3rem;
 }
 
-.project-card .project-link a {
-  font-size: 1.8rem; /* Tamanho maior para links */
+.project-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-link a {
+  font-size: 1.6rem;
   color: var(--text-color);
-  text-decoration: none;
-  transition: 0.3s ease;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
 }
 
-.project-card .project-link i {
-  font-size: 2.5rem; /* Ícones maiores */
-  margin-right: 12px;
-}
-
-.project-card .project-link a:hover {
-  color: #a8d6f5;
+.project-link a:hover {
+  border-bottom: 2px solid var(--text-color);
 }
 
 .contact {
